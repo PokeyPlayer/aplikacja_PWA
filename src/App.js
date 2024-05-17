@@ -1,24 +1,18 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 
 function App() {
+  function showMessage() {
+    document.getElementById("message").innerHTML = "Skrypt JavaScript działa!"
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Moja pierwsza zhostowana aplikacja PWA</h1>
+      <p>Witaj świecie!</p>
+
+      <button onClick={showMessage}>Przycisk</button>
+      <p id="message"></p>
     </div>
   );
 }
